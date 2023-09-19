@@ -71,9 +71,37 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 calle.style.display = "block";
             });
     });
-
+    document.querySelector('#calle').addEventListener('change', function() {
+        let provinciaIndex = document.querySelector("#provincia").value;
+        let municipioIndex = document.querySelector("#municipio").value;
+        let calleIndex = document.querySelector("#calle").value;
+        let numeroIndex = this.value;
+        fetch(ajaxObject.ajaxUrl, {
+            method: 'POST',
+            headers: { 'Content-type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams({
+                    action: 'get_numero',
+                    provinciaIndex: provinciaIndex,
+                    municipioIndex: municipioIndex,
+                    calleIndex: calleIndex,
+                    numeroIndex: numeroIndex
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                let numero = document.querySelector("#numero");
+                numero.innerHTML = '';
+                Object.keys(data).map(function(key) {
+                    let option = document.createElement("option");
+                    option.text = data[key];
+                    option.value = key;
+                    numero.add(option);
+                });
+                numero.style.display = "block";
+            });
+    });
     // Display a sentence underneath the selects when a calle is selected
-    document.querySelector("#calle").addEventListener('change', function() {
+    document.querySelector("#numero").addEventListener('change', function() {
         if (this.value) {
             document.querySelector("#greeting").textContent = "Zuk hautatutako helbidean badago zuntza jadanik.";
         } else {

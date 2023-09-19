@@ -13,22 +13,23 @@ var browserSync = require('browser-sync').create();
 var projectURL = 'http://izarkom';
 
 var styleSRC = './src/scss/zuntza.scss';
+var styleAdminSRC = './src/scss/zuntzaAdmin.scss';
 var styleForm = './src/scss/form.scss';
 var styleSlider = './src/scss/slider.scss';
 var styleAuth = './src/scss/auth.scss'
 //var styleFiles = [styleSRC, styleForm, styleSlider, styleAuth];
-var styleFiles = [styleSRC];
+var styleFiles = [styleSRC, styleAdminSRC];
 var styleDIST = './dist/css/';
 var styleURL = './dist/css/';
 var mapURL = '../maps';
 
 var jsSRC = './src/js/';
 var jsFrontend = 'zuntza.js';
-var jsAdmin = 'zuntza.js';
+var jsAdmin = 'zuntzaAdmin.js';
 var jsForm = 'form.js';
 var jsSlider = 'slider.js';
 var jsAuth = 'auth.js'
-var jsFiles = [jsFrontend]
+var jsFiles = [jsFrontend, jsAdmin];
 //var jsFiles = [jsAdmin, jsForm, jsSlider, jsAuth];
 var jsURL = './dist/js/';
 var jsFolder = 'src/js/';

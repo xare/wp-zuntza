@@ -21,14 +21,19 @@ class Dashboard extends BaseController
 
 
 	public function register() {
+		
 		$this->settings = new SettingsApi();
 		$this->callbacks = new AdminCallbacks();
-		//$this->callbacks_mngr = new ManagerCallbacks();
+
 		$this->setPages();
-		//$this->setSubpages();
-		/* $this->setSettings();
-		$this->setSections();
-		$this->setFields(); */
+		
+		// Register the file upload handling callback
+		add_action('admin_init', [$this->callbacks, 'handleFileUpload']);
+		
+		// Add an action hook to display admin notices
+		add_action('admin_notices', [$this->callbacks, 'displayAdminNotices']);
+
+
 		$this->settings
 			->addPages( $this->pages )
 			->withSubPage( 'Dashboard' )
