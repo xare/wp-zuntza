@@ -1,13 +1,13 @@
 # wp-zuntza
 
-WP Zuntza, zuntza optikoaren lokalizatatzailearen wordpress-erako plugin-a.
+WP Zuntza, zuntza optikoaren lokalizatzailearen wordpress-erako plugin-a.
 
-Zuntza zure kalean dagoen ala ez egiaztatzeko aski duzu
-1. Helbidea.dom/zuntza helbidera jotzea
-2. Bertan dagoen formulategia betetzeak, ez duzu zertan ezer idatzi behar,
-3. Formulategiko kontrolaren azpiko loturetan lehenik herrialdeak hautatzeko aukera daukazu,
+Zuntza optikoa zure kalean dagoen ala ez egiaztatzeko honako urratsak jarraitu:
+1. /zuntza helbidera jo.
+2. Bertan dagoen formulategia bete, ez duzu zertan ezer idatzi behar.
+3. Formulategiko kontrolaren azpiko loturetan lehenik herrialdeak hautatu.
 4. Behin herrialdea haututa udalaren zerrenda agertuko zaizu.
-5. Hiria hautatua kalea agertuko zaizu
+5. Hiria hautatua kalea agertuko zaizu.
 6. Eta kalean hautatuta zenbakia hautatzea daukazu.
 
 Hori eginda egiaztatuta duzu dagoen helbidean zuntza optikoa iritsi den hala ez.
