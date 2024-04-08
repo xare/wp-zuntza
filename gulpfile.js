@@ -25,11 +25,12 @@ var mapURL = '../maps';
 
 var jsSRC = './src/js/';
 var jsFrontend = 'zuntza.js';
+var jsFrontendInput = 'zuntzaInput.js';
 var jsAdmin = 'zuntzaAdmin.js';
 var jsForm = 'form.js';
 var jsSlider = 'slider.js';
 var jsAuth = 'auth.js'
-var jsFiles = [jsFrontend, jsAdmin];
+var jsFiles = [jsFrontend, jsAdmin, jsFrontendInput];
 //var jsFiles = [jsAdmin, jsForm, jsSlider, jsAuth];
 var jsURL = './dist/js/';
 var jsFolder = 'src/js/';

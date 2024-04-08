@@ -13,9 +13,11 @@ class Enqueue extends BaseController {
   }
 function enqueue() {
         //enqueue all our scripts
-        wp_enqueue_style('ZuntzaStyle', $this->plugin_url . 'dist/css/zuntza.min.css');
-        wp_enqueue_script('ZuntzaScript', $this->plugin_url . 'dist/js/zuntza.min.js',[]);
-        wp_localize_script( 'ZuntzaScript', 'ajaxObject', ['ajaxUrl' => admin_url( 'admin-ajax.php' )]);
+        wp_enqueue_style( 'ZuntzaStyle', $this->plugin_url . 'dist/css/zuntza.min.css' );
+        wp_enqueue_script( 'ZuntzaScript', $this->plugin_url . 'dist/js/zuntza.min.js', [], '1.0.0', ['strategy'=>'defer', 'in_footer' => true] );
+        wp_enqueue_script( 'ZuntzaInputScript', $this->plugin_url . 'dist/js/zuntzaInput.min.js', [], '1.0.0', ['strategy'=>'defer', 'in_footer' => true] );
+        wp_localize_script( 'ZuntzaScript', 'ajaxObject', ['ajaxUrl' => admin_url( 'admin-ajax.php' )] );
+        wp_localize_script( 'ZuntzaInputScript', 'ajaxObject', ['ajaxUrl' => admin_url( 'admin-ajax.php' )] );
       }
   function enqueue_admin() {
         wp_enqueue_script('media_upload');

@@ -1,0 +1,36 @@
+#searchBox {
+    width: 30rem;
+    padding: 1rem;
+    border: 1px solid rgb(180, 178, 178);
+    border-radius: 6px;
+}
+
+#suggestions {
+    
+    max-height: 20rem;
+    overflow-y: auto;
+    display:flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#suggestions div {
+    width:max-content;
+    margin: 0.1rem;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    &:hover {
+        background: rgb(213, 213, 213);
+    }
+}
+
+[data-action="reset"] {
+    background: red;
+    color: white;
+    padding: 1rem;
+    margin-inline-start: 1rem;
+    border:none;
+}
